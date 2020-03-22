@@ -26,7 +26,7 @@ export const filterTable = input => {
   const allCountriesInTable = document.querySelectorAll('.all-countries tr td:first-child');
   allCountriesInTable.forEach(country => {
     const td = country.textContent.toLocaleLowerCase();
-    if (td.indexOf(input) !== -1) {
+    if (td.indexOf(input.toLocaleLowerCase()) !== -1) {
       country.parentElement.style.display = 'table-row';
     } else {
       country.parentElement.style.display = 'none';

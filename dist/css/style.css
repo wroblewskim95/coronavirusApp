@@ -9,7 +9,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 60%;
 }
 
 body {
@@ -57,7 +57,7 @@ li {
 
 @media only screen and (min-width: 360px) {
   html {
-    font-size: 70%;
+    font-size: 65%;
   }
   .table th,
   .table td {
