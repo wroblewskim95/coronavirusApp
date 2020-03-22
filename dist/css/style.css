@@ -35,6 +35,11 @@ li {
 .green {
   color: green;
 }
+/* Spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+}
 
 /* Custom Styles Mobile First 320px iPhone 5*/
 
