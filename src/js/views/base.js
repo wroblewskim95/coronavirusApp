@@ -3,6 +3,7 @@ export const elements = {
   table: document.querySelector('table'),
   tableResults: document.querySelector('.all-countries'),
   filterInput: document.querySelector('.filter-input'),
+  worldwideResults: document.querySelector('.worldwide-result'),
 };
 
 export const getYear = () => {
@@ -10,9 +11,9 @@ export const getYear = () => {
   elements.copyRightYear.textContent = getCurrentYear;
 };
 
-export const showSpinner = place => {
+export const showSpinner = parent => {
   const loadingSpinner = `<div class="spinner-border spinner" role="status"><span class="sr-only">Loading...</span></div>`;
-  place.insertAdjacentHTML('afterend', loadingSpinner);
+  parent.insertAdjacentHTML('afterend', loadingSpinner);
 };
 
 export const delateSpinner = parent => {
@@ -29,4 +30,9 @@ export const formatDate = date => {
   hours = `${hours[0]}:${hours[1]}`;
   updateDate = `${day} ${hours}`;
   return updateDate;
+};
+
+export const showError = (message, parent) => {
+  const alertBox = `<div class="alert alert-danger my-4 show-error" role="alert">${message}</div>`;
+  parent.insertAdjacentHTML('afterend', alertBox);
 };
