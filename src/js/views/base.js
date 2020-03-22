@@ -4,6 +4,10 @@ export const elements = {
   tableResults: document.querySelector('.all-countries'),
   filterInput: document.querySelector('.filter-input'),
   worldwideResults: document.querySelector('.worldwide-result'),
+  formSearchCountry: document.querySelector('.form-search-country'),
+  countryInput: document.querySelector('.country-input'),
+  countryResults: document.querySelector('.country-result'),
+  singleCountrySection: document.querySelector('.single-country-stats'),
 };
 
 export const getYear = () => {
@@ -35,4 +39,10 @@ export const formatDate = date => {
 export const showError = (message, parent) => {
   const alertBox = `<div class="alert alert-danger my-4 show-error" role="alert">${message}</div>`;
   parent.insertAdjacentHTML('afterend', alertBox);
+};
+
+export const clearError = () => {
+  if (elements.countryResults.nextElementSibling) {
+    elements.countryResults.nextElementSibling.remove();
+  }
 };
