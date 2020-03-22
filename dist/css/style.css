@@ -1,0 +1,117 @@
+/* CSS Reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: #131313;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Text color */
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+/* Custom Styles Mobile First 320px iPhone 5*/
+
+.table th,
+.table td {
+  vertical-align: middle;
+  padding: 0.25rem;
+}
+
+.footer-heading {
+  font-size: 1.55rem;
+}
+
+/******** Media Queries 360px  ********/
+
+@media only screen and (min-width: 360px) {
+  html {
+    font-size: 70%;
+  }
+  .table th,
+  .table td {
+    padding: 0.3rem;
+  }
+}
+
+/******** Media Queries 414px iPhone 6+, 6s+, 7+, 8+ ********/
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 73%;
+  }
+  .table th,
+  .table td {
+    padding: 0.5rem;
+  }
+}
+
+/******** Media Queries 600px ********/
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+  .table th,
+  .table td {
+    padding: 0.75rem;
+  }
+  .country-result,
+  .worldwide-result,
+  .country-input,
+  .btn-search-country,
+  .alert-danger {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/******** Media Queries 900px ********/
+
+@media only screen and (min-width: 900px) {
+  html {
+    font-size: 76%;
+  }
+  .table th,
+  .table td {
+    padding: 0.8rem;
+  }
+}
+
+/******** Media Queries 1100px ********/
+
+@media only screen and (min-width: 1100px) {
+  html {
+    font-size: 90%;
+  }
+  .table th,
+  .table td {
+    padding: 0.8rem;
+  }
+}

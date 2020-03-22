@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- My CSS Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>Coronavirus Statistics</title>
+  </head>
+  <body>
+    <!-- Single country and worldwide stats -->
+
+    <section class="country-stats">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-lg-8  mx-auto">
+            <div class="card text-center p-3 mx-1 mt-5">
+              <h1>Coronavirus Statistics</h1>
+              <div class="single-country-stats">
+                <form class="form-search-country">
+                  <div class="form-group">
+                    <label for="country">Enter country:</label>
+                    <input
+                      type="text"
+                      class="form-control country-input"
+                      id="country"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-block btn-search-country"
+                  >
+                    Search
+                  </button>
+                </form>
+                <!-- Dynamic Error Message -->
+                <!-- <div class="alert alert-danger my-4 show-error" role="alert">
+                  Country not found
+                </div> -->
+                <ul class="list-group my-5 country-result">
+                  <!-- Dynamic One Country stats result -->
+                  <!-- <li class="list-group-item">Country: China (Hubei)</li>
+                  <li class="list-group-item orange">Confirmed: 67800</li>
+                  <li class="list-group-item red">Deaths: 3133</li>
+                  <li class="list-group-item green">Recovered: 58382</li>
+                  <li class="list-group-item">Last Update: 20/03/2020 07:43</li> -->
+                </ul>
+              </div>
+              <div class="worldwide-stats">
+                <h2>Worldwide</h2>
+                <ul class="list-group mb-5 worldwide-result">
+                  <!-- Dynamic Worldwide stats result -->
+                  <!-- <li class="list-group-item orange">Confirmed: 272167</li>
+                  <li class="list-group-item red">Deaths: 11299</li>
+                  <li class="list-group-item green">Recovered: 87403</li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- List of All Countries -->
+
+    <section class="countries-stats">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
+            <div class="card text-center p-3 mx-1 mt-5">
+              <div class="all-country-stats">
+                <h2>List of All Countries</h2>
+                <form class="text-left mb-4 form-filter-country">
+                  <div class="form-group">
+                    <label for="filter-country">Filter list:</label>
+                    <input
+                      type="text"
+                      class="form-control filter-input"
+                      id="filter-country"
+                      placeholder="Type a few letters to narrow the list"
+                    />
+                  </div>
+                </form>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Country (Province)</th>
+                      <th class="orange">Confirmed</th>
+                      <th class="red">Deaths</th>
+                      <th class="green">Recovered</th>
+                      <th>Last Update</th>
+                    </tr>
+                  </thead>
+                  <tbody class="all-countries">
+                    <!-- Dynamic Tr result element to table with all countries -->
+                    <!-- <tr>
+                      <td>China (Hubei)</td>
+                      <td class="orange">67800</td>
+                      <td class="red">3133</td>
+                      <td class="green">58382</td>
+                      <td>20/03/2020 07:43</td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-lg-8  mx-auto">
+            <div class="card text-center p-3 mx-1 my-5">
+              <h3 class="footer-heading">
+                Made by Mateusz Wróblewski ©<span class="copyright-year"
+                  >2020</span
+                >
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
