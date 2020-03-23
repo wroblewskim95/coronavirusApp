@@ -27,13 +27,20 @@ export const delateSpinner = parent => {
 };
 
 export const formatDate = date => {
-  let updateDate = date.split('T');
-  let day = updateDate[0].split('-');
-  day = `${day[2]}/${day[1]}/${day[0]}`;
-  let hours = updateDate[1].split(':');
-  hours = `${hours[0]}:${hours[1]}`;
-  updateDate = `${day} ${hours}`;
-  return updateDate;
+  // Split Date and hour into array
+  const oldDate = date.split('T');
+  const [oldDay, oldHour] = oldDate;
+  // Convert date . First split date into array then reverse elements and convert into string makes good format.
+  const newDay = oldDay
+    .split('-')
+    .reverse()
+    .join('/');
+  // Convert hour. Split into array then take only hour and minute.
+  const newHours = oldHour.split(':');
+  const [hour, minute] = newHours;
+  const newHour = `${hour}:${minute}`;
+  const newDate = `${newDay} ${newHour}`;
+  return newDate;
 };
 
 export const showError = (message, parent) => {
