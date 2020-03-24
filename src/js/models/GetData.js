@@ -1,7 +1,7 @@
 import { elements, delateSpinner, showError } from '../views/base';
 export const getAllCountries = async () => {
   try {
-    const res = await fetch(`https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?}`, {
+    const res = await fetch('https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats', {
       method: 'GET',
       headers: {
         'x-rapidapi-host': 'covid-19-coronavirus-statistics.p.rapidapi.com',
@@ -9,6 +9,8 @@ export const getAllCountries = async () => {
       },
     });
     const data = await res.json();
+    // Array with result
+    console.log(data);
     return data.data.covid19Stats;
   } catch (err) {
     console.log('The server is not responding. Unable to retrieve data from the API.');
@@ -17,7 +19,7 @@ export const getAllCountries = async () => {
 
 export const getCountry = async country => {
   try {
-    const res = await fetch(`https://covid-19-corsdasdlkkaslasonavirus-statistics.p.rapidapi.com/v1/stats?country=${country}`, {
+    const res = await fetch(`https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?country=${country}`, {
       method: 'GET',
       headers: {
         'x-rapidapi-host': 'covid-19-coronavirus-statistics.p.rapidapi.com',
@@ -25,6 +27,8 @@ export const getCountry = async country => {
       },
     });
     const data = await res.json();
+    // Array with result
+    console.log(data);
     return data.data.covid19Stats;
   } catch (err) {
     console.log('The server is not responding. Unable to retrieve data from the API.');
