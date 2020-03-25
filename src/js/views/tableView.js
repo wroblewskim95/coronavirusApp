@@ -1,12 +1,13 @@
-import { elements, formatDate } from './base';
+import { elements } from './base';
+
 const renderCountry = country => {
   const tableRow = `
     <tr>
-      <td>${country.country} ${country.province !== '' ? `(${country.province})` : ''}</td>
-      <td class="orange">${country.confirmed}</td>
+      <td>${country.country_name}</td>
+      <td class="orange">${country.cases}</td>
       <td class="red">${country.deaths}</td>
-      <td class="green">${country.recovered}</td>
-      <td>${formatDate(country.lastUpdate)}</td>
+      <td class="green">${country.total_recovered}</td>
+      <td>${country.total_cases_per_1m_population}</td>
     </tr>
   `;
   return tableRow;
@@ -15,9 +16,7 @@ const renderCountry = country => {
 export const renderCountries = countries => {
   let listAllCountries = '';
   countries.forEach(country => {
-    if (country.confirmed >= 1) {
-      listAllCountries += renderCountry(country);
-    }
+    listAllCountries += renderCountry(country);
   });
   elements.tableResults.innerHTML = listAllCountries;
 };

@@ -1,3 +1,4 @@
+// DOM elements
 export const elements = {
   copyRightYear: document.querySelector('.copyright-year'),
   table: document.querySelector('table'),
@@ -15,17 +16,6 @@ export const footerYear = () => {
   elements.copyRightYear.textContent = getCurrentYear;
 };
 
-export const showSpinner = parent => {
-  const loadingSpinner = `<div class="spinner-border spinner" role="status"><span class="sr-only">Loading...</span></div>`;
-  parent.insertAdjacentHTML('afterend', loadingSpinner);
-};
-
-export const delateSpinner = parent => {
-  if (parent.nextElementSibling.classList.contains('spinner')) {
-    parent.nextElementSibling.remove();
-  }
-};
-
 export const formatDate = date => {
   // Split Date and hour into array
   const oldDate = date.split(' ');
@@ -41,6 +31,17 @@ export const formatDate = date => {
   const newHour = `${hour}:${minute}`;
   const newDate = `${newDay} ${newHour}`;
   return newDate;
+};
+
+export const showSpinner = parent => {
+  const loadingSpinner = `<div class="spinner-border spinner" role="status"><span class="sr-only">Loading...</span></div>`;
+  parent.insertAdjacentHTML('afterend', loadingSpinner);
+};
+
+export const delateSpinner = parent => {
+  if (parent.nextElementSibling.classList.contains('spinner')) {
+    parent.nextElementSibling.remove();
+  }
 };
 
 export const showError = (message, parent) => {

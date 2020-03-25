@@ -43,7 +43,7 @@ li {
 
 /* Custom Styles Mobile First 320px iPhone 5*/
 
-.table th,
+.table thead th,
 .table td {
   vertical-align: middle;
   padding: 0.25rem;
