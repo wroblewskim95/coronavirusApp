@@ -10,7 +10,7 @@ export const elements = {
   singleCountrySection: document.querySelector('.single-country-stats'),
 };
 
-export const getYear = () => {
+export const footerYear = () => {
   const getCurrentYear = new Date().getFullYear();
   elements.copyRightYear.textContent = getCurrentYear;
 };
@@ -28,7 +28,7 @@ export const delateSpinner = parent => {
 
 export const formatDate = date => {
   // Split Date and hour into array
-  const oldDate = date.split('T');
+  const oldDate = date.split(' ');
   const [oldDay, oldHour] = oldDate;
   // Convert date . First split date into array then reverse elements and convert into string makes good format.
   const newDay = oldDay
