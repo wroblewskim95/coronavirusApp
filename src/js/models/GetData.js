@@ -1,6 +1,6 @@
 // Get Worldwide Stats
 export const getWorldwideStats = async () => {
-  const res = await fetch('https://coronavirus-monitor.p.rapidapi.com/coronavirus/world_total_stat.php', {
+  const res = await fetch('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php', {
     method: 'GET',
     headers: {
       'x-rapidapi-host': 'coronavirus-monitor.p.rapidapi.com',
@@ -26,7 +26,7 @@ export const getAllCountries = async () => {
 
 // Get single country data
 export const getCountry = async country => {
-  const res = await fetch(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=${country}`, {
+  const res = await fetch(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${country}`, {
     method: 'GET',
     headers: {
       'x-rapidapi-host': 'coronavirus-monitor.p.rapidapi.com',
