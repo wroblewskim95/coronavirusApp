@@ -1,6 +1,6 @@
 import { elements } from './base';
 
-const renderCountry = country => {
+const renderCountry = (country) => {
   const tableRow = `
     <tr>
       <td>${country.country_name}</td>
@@ -13,17 +13,19 @@ const renderCountry = country => {
   return tableRow;
 };
 
-export const renderCountries = countries => {
+export const renderCountries = (countries) => {
   let listAllCountries = '';
-  countries.forEach(country => {
-    listAllCountries += renderCountry(country);
+  countries.forEach((country) => {
+    if (country.country_name) {
+      listAllCountries += renderCountry(country);
+    }
   });
   elements.tableResults.innerHTML = listAllCountries;
 };
 
-export const filterTable = input => {
+export const filterTable = (input) => {
   const allCountriesInTable = document.querySelectorAll('.all-countries tr td:first-child');
-  allCountriesInTable.forEach(country => {
+  allCountriesInTable.forEach((country) => {
     const td = country.textContent.toLocaleLowerCase();
     if (td.indexOf(input.toLocaleLowerCase()) !== -1) {
       country.parentElement.style.display = 'table-row';
