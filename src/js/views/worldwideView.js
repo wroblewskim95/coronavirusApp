@@ -1,6 +1,6 @@
 import { elements, formatDate } from './base';
 
-export const renderWorldwideStats = (data) => {
+export const renderWorldwideStats = data => {
   console.log(data);
 
   const worldWideResult = `
